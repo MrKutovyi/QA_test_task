@@ -17,5 +17,6 @@ sign_in_button.click()
 time.sleep(3)
 
 error_message = driver.find_element_by_xpath("//div[text()='Username or password is incorrect.']")
+assert error_message.text == "Username or password is incorrect."
 
 driver.quit()
