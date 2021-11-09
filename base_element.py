@@ -11,6 +11,7 @@ class BaseElement(object):
         self.locator = (self.by, self.value)
 
         self.web_element = None
+
         self.find()
 
     def find(self):
@@ -18,16 +19,20 @@ class BaseElement(object):
         self.web_element = element
         return None
 
+    def input_text(self, txt):
+        self.web_element.send_keys(txt)
+
     def click(self):
         element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(locator=self.locator))
         element.click()
         return None
 
+    def attribute(self, attr_name):
+        attribute = self.web_element.get_attribute(attr_name)
+        return attribute
+
+    @property
     def text(self):
         text = self.web_element.text
         return text
 
-    def send(self):
-        element = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator=self.locator))
-        self.web_element = element
-        element.send_keys(Keys.Enter)
