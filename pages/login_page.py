@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from .base_element import BaseElement
 from .base_page import BasePage
 
@@ -20,5 +19,10 @@ class LoginPage(BasePage):
 
     @property
     def login_button(self):
-        locator = (By.CLASS_NAME, 'btn btn-lg btn-primary btn-block')
-        return  BaseElement(self.driver, by=locator[0], value=locator[1])
+        locator = (By.XPATH, '/html/body/div/div/form/div[2]/button')
+        return BaseElement(self.driver, by=locator[0], value=locator[1])
+
+    @property
+    def error_message(self):
+        locator = (By.XPATH, '/html/body/div/div/form/div[2]/div[1]')
+        return BaseElement(self.driver, by=locator[0], value=locator[1])
