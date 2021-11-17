@@ -6,16 +6,19 @@ from .base_page import BasePage
 
 class LoginPage(BasePage):
 
-    url = 'http://demo.hospitalrun.io'
+    url = 'http://demo.hospitalrun.io'\
 
-     def user_name_field(self):
+    @property
+    def user_name_field(self):
         locator = (By.ID, 'identification')
-        return BaseElement(driver=self.driver, by=locator[0], value=locator[1])
+        return BaseElement(self.driver, by=locator[0], value=locator[1])
 
+    @property
     def password_field(self):
         locator = (By.ID, 'password')
-        return BaseElement(driver=self.driver, by=locator[0], value=locator[1])
+        return BaseElement(self.driver, by=locator[0], value=locator[1])
 
+    @property
     def login_button(self):
         locator = (By.CLASS_NAME, 'btn btn-lg btn-primary btn-block')
-        return BaseElement(driver=self.driver, by=locator[0], value=locator[1])
+        return  BaseElement(self.driver, by=locator[0], value=locator[1])
