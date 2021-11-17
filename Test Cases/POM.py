@@ -10,5 +10,6 @@ test_value = 'Test passed'
 #Test
 log_page = LoginPage(driver=browser)
 log_page.go()
+log_page.user_name_field().web_element.
 browser.quit()
 print(test_value)
