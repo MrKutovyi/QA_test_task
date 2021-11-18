@@ -30,8 +30,7 @@ class BaseElement(object):
         attribute = self.web_element.get_attribute(attr_name)
         return attribute
 
-    #@property
+    @property
     def text(self):
-        text = self.web_element.text(self.driver, 10).until(EC.visibility_of_element_located(locator=self.locator))
+        text = self.web_element.text
         return text
-
