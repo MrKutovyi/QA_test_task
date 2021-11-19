@@ -32,5 +32,5 @@ class BaseElement(object):
 
     @property
     def text(self):
-        text = self.web_element.text
-        return text
+        return self.web_element.get_attribute('innerHTML')
+

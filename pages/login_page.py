@@ -24,6 +24,6 @@ class LoginPage(BasePage):
 
     @property
     def error_message(self):
-        locator = (By.XPATH, '/html/body/div/div/form/div[2]/div[1]')
+        locator = (By.XPATH, "//div[@class='alert alert-danger form-signin-alert']")
         return BaseElement(driver=self.driver, by=locator[0], value=locator[1])
 
