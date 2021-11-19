@@ -8,4 +8,6 @@ class BasePage(object):
     def go(self):
         self.driver.get(self.url)
 
+    # def check_url(self):
+    #     return self.driver.current_url()
 

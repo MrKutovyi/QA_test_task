@@ -27,3 +27,5 @@ class LoginPage(BasePage):
         locator = (By.XPATH, "//div[@class='alert alert-danger form-signin-alert']")
         return BaseElement(driver=self.driver, by=locator[0], value=locator[1])
 
+
+
