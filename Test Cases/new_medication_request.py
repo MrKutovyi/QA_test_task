@@ -13,3 +13,4 @@ currentURL = None
 # Test
 med_page = MedPage(driver=browser)
 med_page.go()
+med_page.new_request_button.click()
