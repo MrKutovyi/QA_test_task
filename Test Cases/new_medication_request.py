@@ -14,3 +14,5 @@ currentURL = None
 med_page = MedPage(driver=browser)
 med_page.go()
 med_page.new_request_button.click()
+med_page.patient_field.find()
+med_page.patient_field.input_text('Annas Mukminin Safari')

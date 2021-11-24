@@ -15,7 +15,7 @@ class MedPage(BasePage):
 
     @property
     def patient_field(self):
-        locator = (By.ID, 'patientTypeAhead-ember3303')
+        locator = (By.ID, 'patientTypeAhead-ember2650')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
