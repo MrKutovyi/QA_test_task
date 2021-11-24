@@ -1,15 +1,15 @@
 from selenium import webdriver
 
 from successful_login import *
-from new_patient import *
 from pages.base_element import BaseElement
 from pages.med_page import LoginPage
-from pages.med_page import MedPage
+from pages.patients_page import PatientsPage
 
 
 # Test Setup
 currentURL = None
 
 # Test
-med_page = MedPage(driver=browser)
-med_page.go()
+patient_page = PatientsPage(driver=browser)
+patient_page.go()
+patient_page.new_patient_button.click()
