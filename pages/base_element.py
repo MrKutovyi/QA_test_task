@@ -21,6 +21,9 @@ class BaseElement(object):
     def input_text(self, txt):
         self.web_element.send_keys(txt)
 
+    def keyboard_buttons(self):
+        self.web_element.send_keys()
+
     def click(self):
         element = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(locator=self.locator))
         element.click()
@@ -33,4 +36,3 @@ class BaseElement(object):
     @property
     def text(self):
         return self.web_element.get_attribute('innerHTML')
-

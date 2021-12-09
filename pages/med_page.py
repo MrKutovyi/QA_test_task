@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from .base_element import BaseElement
 from .base_page import BasePage
 from .login_page import LoginPage
+from selenium.webdriver.common.keys import Keys
 
 
 class MedPage(BasePage):
@@ -15,22 +16,22 @@ class MedPage(BasePage):
 
     @property
     def patient_field(self):
-        locator = (By.ID, 'patientTypeAhead-ember2650')
+        locator = (By.XPATH, '//*[@id="patientTypeAhead-ember2653"]')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
     def medication_field(self):
-        locator = (By.ID, 'inventoryItemTypeAhead-ember3314')
+        locator = (By.XPATH, '//*[@id="inventoryItemTypeAhead-ember2720"]')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
     def prescription_field(self):
-        locator = (By.ID, 'prescription-ember3320')
+        locator = (By.XPATH, '//*[@id="prescription-ember2751"]')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
     def prescription_date(self):
-        locator = (By.ID, 'display_prescriptionDate-ember3325')
+        locator = (By.XPATH, '//*[@id="display_prescriptionDate-ember2774"]')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
