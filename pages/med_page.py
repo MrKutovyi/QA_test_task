@@ -15,17 +15,17 @@ class MedPage(BasePage):
 
     @property
     def patient_field(self):
-        locator = (By.ID, 'patientTypeAhead-ember2650')
+        locator = (By.ID, 'patientTypeAhead-ember2684')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
     def medication_field(self):
-        locator = (By.ID, 'inventoryItemTypeAhead-ember3314')
+        locator = (By.ID, 'inventoryItemTypeAhead-ember2751')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
     def prescription_field(self):
-        locator = (By.ID, 'prescription-ember3320')
+        locator = (By.ID, 'prescription-ember2783')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
@@ -35,7 +35,7 @@ class MedPage(BasePage):
 
     @property
     def quantity_field(self):
-        locator = (By.ID, 'quantity-ember3330')
+        locator = (By.ID, 'quantity-ember2825')
         return BaseElement(self.driver, by=locator[0], value=locator[1])
 
     @property
